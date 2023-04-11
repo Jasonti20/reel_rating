@@ -1,0 +1,41 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "back/server.js"
+      },      {
+        "src": "/postdatatoFlask/(.*)",
+        "dest": "back/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "front/build/index.html"
+      }
+    ],
+    "builds": [
+      {
+        "src": "back/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "front/build/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "build": {
+        "env": {
+          "FIREBASE_PRIVATE_KEY": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDKFskxXLs4lmP8\nT2d/wYkqUjCPAvEOCBKviX4hJN3TZgwQvPq5iSb1kysA0FAMdI5WEZwWJkVxYM9q\nk03a5y3FB0ODEyuGum6ZuvWEHX2MSJDCFS9NBEDmvLDBnvP1bvCf/m+4Btzb/VR0\nRET0gjY0nHFgRUwJ3POJzSwqB382Eo2Yyu2DnS2WYdz23rD6c85KzgWRlq6ieBcx\nHalrA3jS8LL9TrSca7/+BL55SEmgt/I5ZpGZ92eQYeQl3aMG5stebRXp6ygN0AiP\nXTOwxziGxijlyDFJlFPKjMjOveBYfAXyo/fTI8kLMf08W01NSM8l5DwOPn7BobUT\nU1+pClP1AgMBAAECggEAIMboU+rD7O4rgmFImqaDvkr9WDy0Zz+09CabP/nwRpjP\nDSnxioUtvffkKiofSZ3f9iK+C7OiYLzAd3szzfTf7gx7DTffP+deB+4UYxy7X7Tn\nUatI9Ddj5WimTIkg7WZUfcaxTQpD6SRh/ceS3Yt/CjJzixdCOXlOQMP3zUtQ/S5k\nX4jKHJ6HDxjwAh2xu8siZIoLnl8z5NLJk0ezdzqWYWawsnSu9MnVMIPxM8rkJFuW\n1zw9Eej6fwiLVWx6K+iHcDcPlq+iVgOLnEGuOuxgpRR5ZncyzeiF6QbQOOuOnJES\nyPS+I3o5nH7qZjCSgJmZoaypgacAnApE7iBMxDrmwwKBgQDoMtJLSlu0pwT+B2XS\nNa+ZQMVULpAECtnW3Qiymqm0FQ9DeXHJr258m4AzbzWNq1mQdNkWZuOIndapaxe/\n25suJD5mZklnACIedgFd7PSR645jAvbl0VqytXANLbh3kMyhY8Si4pPaVOmWTYea\ng1SlidFLYTZ3GUK5FCKvFLAR1wKBgQDezdpw49OlO/91dWj0T93EjRN3d4zCXMnx\nI47lI1GHePZ4dXCHtnTUD4Jk+BSKxer0d5cxFvh0H3iwIJ3MIrd3NHZjXe9mbyNF\nuyjWb9DIXGd1qfcQXXjXgswLufo1ooTpj5H1viJAjlCeAqL76mFaezp+XbX1KQSo\niVqlgyDnEwKBgDH1xWOnwyWSjjNuOg1JudeapRqgziHgh9CATH/JYVw678bP2ZjQ\no1AyURpAAmDSDnpTeeYlCy348BgRz9FbGf+KktaLiZ2c3Lp7H34rHtBKw58wIxl9\nuysaeNqNDNTFFhJfmg6F+9QNUxkg411uhob7qUmzx/lGOSIDYBcVt3CPAoGBAMp5\nXiq7D+oX9RYkBaYIMmvdHLSzouo6cpY+DyyyhPPM/IcJiqL6L39LPN9PBzP5moRh\nbbeBvXWh6AZ/DYemgP3GYlP42IdJNk+3Puxont6GAstOEyT/HMMUrSN29ifpskmi\nXC1rhSsPabm+gajXHXOhis2tkZ7ikMYsVIEXAj6bAoGBAIh0pCLEGOIqvP6Rq9t0\nptW74f/zvntybW/C6g3CScwIpTZZSfaUn06si+AlHpSJoITEol5htwPHGsLcgzBW\n+Q49jl4HpURsVW5jaw3LpnZ2OgU8gHhHXXrXbST7rIsZy1uForTUovRWpDCZiF7V\nfn5YfiU3Eevsii752BzZU1N1\n-----END PRIVATE KEY-----\n",
+          "FIREBASE_CLIENT_EMAIL": "firebase-adminsdk-sdvzm@cse437-7f5fc.iam.gserviceaccount.com"
+        },
+        "functions": {
+          "package": {
+            "include": [
+              "node_modules/request-promise/**/*"
+            ]
+          }
+        }
+      }
+  }
+
+  

@@ -1,0 +1,14 @@
+{
+  "name": "reels",
+  "version": "1.0.0",
+  "description": "together",
+  "main": "cd front & index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd back && node server.js & cd front && npm start"
+  },
+  "author": "Jason Ti",
+  "license": "ISC"
+  
+}
+
