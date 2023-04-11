@@ -1,0 +1,37 @@
+.genre{
+    font-size: .8rem !important;
+}
+ /* h3{
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    transition: width 0.5s ease;
+    height: 2px;
+    background-color: #ff0000;
+}  */
+h3::after{
+    width: 0 !important;
+}
+.releaseDate{
+    color: rgb(203, 203, 203);
+}
+.person{
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+}
+.title,.heart{
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+}
+.heart:hover{
+    cursor: pointer;
+    color: rgb(216, 0, 0) !important;
+}
