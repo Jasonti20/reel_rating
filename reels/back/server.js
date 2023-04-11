@@ -16,13 +16,12 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
-// app.use(express.static(path.join(__dirname, '../../front/build')));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
-// // Catch-all route to serve index.html for any other requests
-// app.get("*", (req, res) => {
+app.use(express.static(path.join(__dirname, 'build')));
 
-//   res.sendFile(path.join(__dirname, '../front/build', 'index.html'));
-// });
 
 // Initialize the Firestore instance
 const db = admin.firestore();

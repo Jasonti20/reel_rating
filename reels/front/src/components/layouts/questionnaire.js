@@ -65,7 +65,7 @@ const Questionnaire = () => {
   }
   
   function callAPI(userId) {
-    fetch('http://localhost:8080/postdatatoFlask/' + userId)
+    fetch('https://back-jasonti20.vercel.app/postdatatoFlask/' + userId)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
