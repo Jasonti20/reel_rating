@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "back/server.js"
+      },      {
+        "src": "/postdatatoFlask/(.*)",
+        "dest": "back/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "front/build/index.html"
+      }
+    ],
+    "builds": [
+      {
+        "src": "back/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "front/build/**",
+        "use": "@vercel/static"
+      }
+    ]
+  }
+
+  
