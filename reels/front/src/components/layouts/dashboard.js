@@ -4,6 +4,7 @@ import Row from "./Row";
 import requests from "../../config/tmdb";
 import { getMoviesForUser } from "../../config/tmdb";
 import Banner from "./Banner";
+import Nav from "./Nav";
 
 const DashBoard = () => {
   const { getCurrentUserId } = useAuth();
@@ -16,10 +17,12 @@ const DashBoard = () => {
 
   return (
     <div>
+      {/* <Nav/> */}
       <Banner />
-      <Row title="Popular Now" fetchUrl={requests.fetchPopular} moviesPromise={null} isLargeRow />
-      
       <Row title="Recommended"fetchUrl={null} moviesPromise={moviesPromise} isLargeRow />
+      {/* <Row title="Popular Now" fetchUrl={requests.fetchPopular} moviesPromise={null} isLargeRow /> */}
+      
+      
 
       {/* <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
       <Row title='Action Movies' fetchUrl={requests.fetchActionMovies} />

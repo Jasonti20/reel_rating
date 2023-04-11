@@ -89,7 +89,7 @@ function Row({ title, fetchUrl, isLargeRow, moviesPromise }) {
       console.log("Name" + cur);
       //setTrailerUrl(trailerurl.data.results[0]?.key);
     }
-    setMovieUrl("http://localhost:3000/movie/" + movie.id )
+    setMovieUrl("https://front-jasonti20.vercel.app/movie/" + movie.id )
     modalElement.addEventListener('hidden.bs.modal', modalHideHandler);
   };
 
